@@ -1,0 +1,138 @@
+<html>
+  <head>
+    <meta name="description" content="This is Mercedes Gasser's Online Portfolio.">
+    <title>Mercedes Gasser</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link
+      rel="stylesheet"
+      href="prism-atom-dark.css"
+      type="text/css"
+      media="screen"
+    />
+
+    <script type="text/javascript" src="prism.js"></script>
+    <script type="text/javascript" src="prism.ruby.js"></script>
+
+  </head>
+
+  <body>
+    <div class="about-container">
+      <div class="about">
+        <img src="me.jpg" class="me" />
+        <h1>Mercedes Gasser</h1>
+        <h2>Full-Stack Web Developer Student</h2>
+        <hr class="grey"/>
+        <p class="bio">
+          Mercedes (Murry) Gasser is passionate about helping small businesses create their own space in the online world.
+          Before deciding to study web development, she received a degree in Linguistics from UW Madison, worked at a preschool
+          teaching what were probably the most adorable kids in the world, got married to the most kind and handsome man (as evidenced by the picture above) and filled a few different positions at a luxury car dealership, including a newly created
+          position of Internet Sales and Marketing Consultant.
+        </p>
+      </div>
+    </div>
+    <h3>Code Snippets</h3>
+    <hr class="gray">
+
+    <div class="box">
+      <h4>Temperature Conversion</h4>
+      <p>
+        This Ruby program will prompt the user for a temperature
+        in degrees Celsius and let the user know what the
+        corresponding temperature is in Fahrenheit.
+      </p>
+    </div>
+
+    <div class="box">
+      <pre><code class="language-ruby">      puts &quot;Please enter degrees in Celcius:&quot;
+        
+      c = gets.chomp.to_f
+
+      def c_to_f(x)
+        return x * 1.8 + 32.0
+      end
+
+      f = c_to_f(c)
+
+      puts &quot;The temperature is #{f} degrees Fahrenheit.&quot;</code></pre>
+    </div>
+
+    <br class="clear" />
+
+    <div class="box">
+      <pre><code class="language-ruby">      puts &quot;Please enter a pleasant number, one that sounds
+      nice as it rolls off the tongue.&quot;
+
+      number = gets.chomp.to_i
+
+      def suffix(number)
+        modulo = number % 10
+
+        if number == 11 || number == 12 || number == 13
+          return &quot;th&quot;
+        elsif modulo == 1
+          return &quot;st&quot;
+        elsif modulo == 2
+          return &quot;nd&quot;
+        elsif modulo == 3
+          return &quot;rd&quot;
+        else
+          return &quot;th&quot;
+        end
+      end
+
+      puts &quot;You know, what a funny coincidence --
+      You're the #{number}#{suffix(number)} person to
+      give me that answer!&quot;</code></pre>
+    </div>
+
+    <div class="box">
+      <h4>Ordinal Challenge</h4>
+      <p>
+        This Ruby program will convert a plain number
+        to the ordinal of the number. So for example,
+        if the user enters 2, it will display 2nd, if
+        the user enters 3, it will display 3rd, etc.
+      </p>
+    </div>
+
+    <br class="clear" />
+
+    <div class="box">
+      <h4>Foobar</h4>
+      <p>
+        This Ruby program is an adaptation of a classic technical
+        interview problem which displays sequences
+        of the Foobar pattern.
+      </p>
+    </div>
+
+    <div class="box">
+      <pre><code class="language-ruby">      puts &quot;Let's play the FooBar game! How many numbers should I do?&quot;
+
+      answer = gets.chomp.to_i
+
+      puts &quot;Okay! Here goes:&quot;
+
+      answer.times do |n|
+        iteration = n + 1
+
+        if iteration % 3 == 0 && iteration % 5 == 0
+          puts &quot;Foobar&quot;
+        elsif iteration % 3 == 0
+          puts &quot;Foo&quot;
+        elsif iteration % 5 == 0
+          puts &quot;Bar&quot;
+        else
+          puts iteration
+        end
+      end
+
+      puts &quot;Yay! That was fun!&quot;</code></pre>
+    </div>
+
+    <br class="clear" />
+
+  </body>
+
+</html>
